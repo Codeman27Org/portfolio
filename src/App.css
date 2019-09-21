@@ -1,8 +1,23 @@
 .App {
-  text-align: center;
+  font-family: 'Turret Road', cursive;
 }
 
 .App-header {
+  display: flex;
   background-color: #282c34;
+  padding: 1em;
 
+}
+.App-logo {
+  width: 20%;
+}
+
+.nav {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav > h1 {
+  padding: 0.2em;
 }

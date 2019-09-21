@@ -6,8 +6,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
+        <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
+        <div className='nav'>
+          <h1>Portfolio</h1>
+          <h1>About</h1>
+          <h1>Contact</h1>
+        </div>
       </header>
     </div>
   );
