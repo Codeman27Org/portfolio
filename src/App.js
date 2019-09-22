@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
+import Drawer from './components/Drawer.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
-        <div className='nav'>
-          <h1>Portfolio</h1>
-          <h1>About</h1>
-          <h1>Contact</h1>
-        </div>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    links: ['Portfolio', 'About', 'Contact']
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
+          <div className='nav'>
+            <Drawer links={this.state.links}/>
+          </div>
+        </header>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
