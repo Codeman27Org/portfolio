@@ -6,7 +6,7 @@ import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import MenuOpenIcon from '@material-ui/icons/MenuOpen'
+import bars from '../bars.png';
 
 const useStyles = makeStyles({
   list: {
@@ -15,9 +15,6 @@ const useStyles = makeStyles({
   fullList: {
     width: 'auto',
   },
-  largeIcon: {
-    fontSize: '3em',
-  }
 })
 
 const Drawer = (props) => {
@@ -61,7 +58,7 @@ const Drawer = (props) => {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('right', true)}><MenuOpenIcon className={classes.largeIcon}/></Button>
+      <Button onClick={toggleDrawer('right', true)}><img src={bars} className="menu-icon" alt="menu-icon" /></Button>
       <SwipeableDrawer
         anchor="right"
         open={state.right}
