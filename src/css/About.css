@@ -1,0 +1,27 @@
+.About {
+  display: grid;
+  margin: 0.5em 0.7em 0 0.7em;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 25% auto;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.about-imgcontainer {
+  display: flex;
+  align-items: center;
+  grid-row: 1 / span 3;
+
+}
+
+.about-hello {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.about-desc {
+  margin-left: 1em;
+}

@@ -6,7 +6,10 @@ import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import bars from '../bars.png';
+import { FaBars } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
+import logo from '../logo.png'
+import '../css/Drawer.css'
 
 const useStyles = makeStyles({
   list: {
@@ -15,6 +18,9 @@ const useStyles = makeStyles({
   fullList: {
     width: 'auto',
   },
+  fontType: {
+
+  }
 })
 
 const Drawer = (props) => {
@@ -38,16 +44,10 @@ const Drawer = (props) => {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-      <List>
-        {props.links.map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <img src={logo} className="drawer-logo" alt="logo" />
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {props.links.map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>
@@ -57,8 +57,12 @@ const Drawer = (props) => {
   )
 
   return (
-    <div>
-      <Button onClick={toggleDrawer('right', true)}><img src={bars} className="menu-icon" alt="menu-icon" /></Button>
+    <div className='bars-button'>
+      <Button onClick={toggleDrawer('right', true)}>
+        <IconContext.Provider value={{size:'2.5em'}}>
+          <FaBars />
+        </IconContext.Provider>
+      </Button>
       <SwipeableDrawer
         anchor="right"
         open={state.right}
