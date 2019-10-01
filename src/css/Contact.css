@@ -1,0 +1,23 @@
+.Contact {
+  padding: 1em;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-icon {
+  padding-left: 1em;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-copyright {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
