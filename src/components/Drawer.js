@@ -37,6 +37,13 @@ const Drawer = (props) => {
     setState({ ...state, [side]: open })
   }
 
+  const handleClick = (index) => {
+    console.log(props.refs[index])
+    if(index < 3) {
+      props.refs[index].current.scrollIntoView(false)
+    }
+  }
+
   const sideList = side => (
     <div
       className={classes.list}
@@ -48,7 +55,7 @@ const Drawer = (props) => {
       <Divider />
       <List>
         {props.links.map((text, index) => (
-          <ListItem button key={text}>
+          <ListItem button key={text} onClick={() => {handleClick(index)}}>
             <ListItemText primary={text} />
           </ListItem>
         ))}

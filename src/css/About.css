@@ -1,6 +1,6 @@
 .About {
   display: grid;
-  margin: 0.5em 0.7em 0 0.7em;
+  margin: 7em 0.7em 0 0.7em;
   grid-template-columns: 25% auto;
   grid-template-rows: 25% auto;
 }

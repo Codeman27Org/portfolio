@@ -8,7 +8,7 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div className='Portfolio'>
+      <div className='Portfolio' ref={this.props.propRef}>
         <div>
           <p className='portfolio-text'>Bestaurants</p>
           <img src={bestaurants} className='portfolio-img' alt="profile pic"/>

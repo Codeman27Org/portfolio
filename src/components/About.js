@@ -5,7 +5,7 @@ import '../css/About.css'
 class About extends Component {
   render() {
     return (
-      <div className='About'>
+      <div className='About' ref={this.props.propRef}>
       <div className='about-imgcontainer'>
         <img src={profile} className='about-img' alt="profile pic" />
       </div>

@@ -5,11 +5,15 @@ import Drawer from './components/Drawer.js'
 import About from './components/About.js'
 import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
+//, Switch, Route, Link
 
 class App extends Component {
   state = {
-    links: ['About', 'Portfolio', 'Contact', 'Blog']
+    links: ['About', 'Portfolio', 'Contact', 'Blog'],
+    aboutRef: React.createRef(),
+    portfolioRef: React.createRef(),
+    contactRef: React.createRef(),
   }
 
   render() {
@@ -24,12 +28,12 @@ class App extends Component {
               </div>
             </div>
             <div className='nav'>
-              <Drawer links={this.state.links}/>
+              <Drawer links={this.state.links} refs={[this.state.aboutRef, this.state.portfolioRef, this.state.contactRef]}/>
             </div>
           </header>
-            <About/>
-            <Portfolio/>
-            <Contact/>
+            <About propRef={this.state.aboutRef} />
+            <Portfolio propRef={this.state.portfolioRef}/>
+            <Contact propRef={this.state.contactRef}/>
         </div>
       </Router>
     )
