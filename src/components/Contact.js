@@ -6,7 +6,7 @@ import { IconContext } from 'react-icons'
 class Contact extends Component {
   render() {
     return (
-      <div id='Contact' ref={this.props.propRef}>
+      <div className='Contact' ref={this.props.propRef}>
         <div className='contact-icons'>
           <IconContext.Provider value={{size:'3em'}}>
             <a href='https://github.com/codeman27' target='_blank' rel='noopener noreferrer'><FaGithubSquare className='contact-icon'/></a>

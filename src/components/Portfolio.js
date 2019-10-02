@@ -3,16 +3,19 @@ import '../css/Portfolio.css'
 import bestaurants from '../images/bestaurants.png'
 import memory from '../images/memory_game.png'
 import pomodoro from '../images/pomodoro_clock.png'
+import {Link} from 'react-router-dom'
 
 class Portfolio extends Component {
 
   render() {
     return (
       <div className='Portfolio' ref={this.props.propRef}>
-        <div>
-          <p className='portfolio-text'>Bestaurants</p>
-          <img src={bestaurants} className='portfolio-img' alt="profile pic"/>
-        </div>
+        <Link to='bestaurants'>
+          <div>
+            <p className='portfolio-text'>Bestaurants</p>
+            <img src={bestaurants} className='portfolio-img' alt="profile pic"/>
+          </div>
+        </Link>
         <div>
           <p className='portfolio-text'>Matching Game</p>
           <img src={memory} className='portfolio-img' alt="profile pic"/>

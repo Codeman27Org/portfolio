@@ -8,6 +8,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import { FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import {Link} from 'react-router-dom'
 import logo from '../logo.png'
 import '../css/Drawer.css'
 
@@ -37,14 +38,19 @@ const Drawer = (props) => {
     setState({ ...state, [side]: open })
   }
 
-  const handleClick = (index) => {
-    console.log(props.refs[index])
+  const handleClick = (text, index) => {
+    if(text === 'Home') {
+      return
+    }
     if(index < 3) {
       props.refs[index].current.scrollIntoView(false)
     }
+    else {
+      window.alert('A blog will be added soon!')
+    }
   }
 
-  const sideList = side => (
+  const sideList = (side) => (
     <div
       className={classes.list}
       role="presentation"
@@ -54,11 +60,15 @@ const Drawer = (props) => {
       <img src={logo} className="drawer-logo" alt="logo" />
       <Divider />
       <List>
-        {props.links.map((text, index) => (
-          <ListItem button key={text} onClick={() => {handleClick(index)}}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+          {props.links.map((text, index) => {
+            return(
+              <Link to='/' key={text}>
+                <ListItem button key={text} onClick={() => {handleClick(text, index)}}>
+                  <ListItemText primary={text} />
+                </ListItem>
+              </Link>
+            )
+        })}
       </List>
     </div>
   )
