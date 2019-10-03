@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../css/App.css'
+// import '../css/App.css'
 import About from './About.js'
 import Portfolio from './Portfolio.js'
 import Contact from './Contact.js'

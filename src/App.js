@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Home from './components/Home.js'
-import {BrowserRouter as Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Switch, Route, Redirect} from 'react-router-dom'
 import PortfolioDetail from './components/PortfolioDetail.js'
+import textObject from './text_content.js'
 import bestaurants from './images/bestaurants.png'
 import matching from './images/memory_game.png'
 import pomodoro from './images/pomodoro_clock.png'
-import NoMatch from './components/NoMatch.js'
 
 class App extends Component {
   state = {
@@ -13,9 +13,9 @@ class App extends Component {
     aboutRef: React.createRef(),
     portfolioRef: React.createRef(),
     contactRef: React.createRef(),
-    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants'}
-              ,{title:'Matching Game', image:matching, link:'matching'}
-              ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro'}],
+    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants, outsideLink:'https://bestaurants.io/'}
+              ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame}
+              ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro}],
     currentProject: ''
   }
 
@@ -23,15 +23,11 @@ class App extends Component {
     this.setState({currentProject: project})
   }
 
-  componentDidMount() {
-    console.log(window.location.href)
-  }
-
   render() {
     return (
         <div>
           <Switch>
-            <Route path='/' exact>
+            <Route exact path='/' >
               <Home links={this.state.links}
                 aboutRef={this.state.aboutRef}
                 portfolioRef={this.state.portfolioRef}
@@ -39,12 +35,10 @@ class App extends Component {
                 projects={this.state.projects}
                 findClickedProject={this.findClickedProject}/>
             </Route>
-            <Route path={`/${this.state.currentProject.link}`} exact>
+            <Route path={`/${this.state.currentProject.link}`}>
               <PortfolioDetail currentProject={this.state.currentProject}/>
             </Route>
-            <Route>
-              <NoMatch contactRef={this.state.contactRef}/>
-            </Route>
+            <Route render={() => <Redirect to="/" />} />
           </Switch>
         </div>
     )

@@ -1,3 +1,43 @@
 .PortfolioDetail {
-  margin: 20em 0.7em 0 0.7em;
+  display: flex;
+  height: 100vh;
+  flex-flow: column nowrap;
+}
+
+.detail-contact {
+  margin-top: auto;
+}
+
+.detail-body {
+  margin-top: 10em;
+}
+
+.portfolio-text {
+  color: black;
+  text-align: center;
+}
+
+.detail-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.image-container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.detail-description {
+  background-color: black;
+  color: white;
+}
+
+.detail-text {
+  display: flex;
+  flex-flow: column;
+  height: 35vh;
+  margin-top: 0px;
+  margin: 0 1em 0 1em;
+  align-items: center;
 }
