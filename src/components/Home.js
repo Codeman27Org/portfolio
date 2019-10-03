@@ -11,7 +11,7 @@ class Home extends Component {
       <div className="App">
         <Header links={this.props.links} refs={[this.props.aboutRef, this.props.portfolioRef, this.props.contactRef]}/>
         <About propRef={this.props.aboutRef}/>
-        <Portfolio propRef={this.props.portfolioRef}/>
+        <Portfolio propRef={this.props.portfolioRef} projects={this.props.projects} findClickedProject={this.props.findClickedProject}/>
         <Contact propRef={this.props.contactRef}/>
       </div>
     )

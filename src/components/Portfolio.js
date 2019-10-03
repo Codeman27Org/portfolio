@@ -1,29 +1,21 @@
 import React, { Component } from 'react'
 import '../css/Portfolio.css'
-import bestaurants from '../images/bestaurants.png'
-import memory from '../images/memory_game.png'
-import pomodoro from '../images/pomodoro_clock.png'
 import {Link} from 'react-router-dom'
 
 class Portfolio extends Component {
-
   render() {
     return (
       <div className='Portfolio' ref={this.props.propRef}>
-        <Link to='bestaurants'>
-          <div>
-            <p className='portfolio-text'>Bestaurants</p>
-            <img src={bestaurants} className='portfolio-img' alt="profile pic"/>
-          </div>
-        </Link>
-        <div>
-          <p className='portfolio-text'>Matching Game</p>
-          <img src={memory} className='portfolio-img' alt="profile pic"/>
-        </div>
-        <div>
-          <p className='portfolio-text'>Pomodoro Clock</p>
-          <img src={pomodoro} className='portfolio-img' alt="profile pic"/>
-        </div>
+        {this.props.projects.map((project, index) => {
+          return (
+            <Link to={project.link} onClick={() => this.props.findClickedProject(project)} key={project.title}>
+              <div>
+                <p className='portfolio-text'>{project.title}</p>
+                <img src={project.image} className='portfolio-img' alt="portfolio pic"/>
+              </div>
+            </Link>
+          )
+        })}
       </div>
     )
   }
