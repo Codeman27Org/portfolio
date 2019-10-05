@@ -9,11 +9,14 @@ class Header extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className='logo-area'><Link to='/' className='link'><img src={logo} className="App-logo" alt="logo" /></Link>
-            <div className='name-container'>
-              <h1 className='name-header'>Cody Roof</h1>
-              <p className='name-desc'>Web | Data | Design</p>
+          <div className='logo-area'>
+            <div>
+              <Link to='/' className='link'><img src={logo} className="App-logo" alt="logo" /></Link>
             </div>
+          </div>
+          <div className='name-container'>
+            <h1 className='name-header'>Cody Roof</h1>
+            <p className='name-desc'>Web | Data | Design</p>
           </div>
           <div className='nav'>
           {

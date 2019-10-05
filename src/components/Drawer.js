@@ -74,20 +74,32 @@ const Drawer = (props) => {
   )
 
   return (
-    <div className='bars-button'>
-      <Button onClick={toggleDrawer('right', true)}>
-        <IconContext.Provider value={{size:'2.5em'}}>
-          <FaBars />
-        </IconContext.Provider>
-      </Button>
-      <SwipeableDrawer
-        anchor="right"
-        open={state.right}
-        onClose={toggleDrawer('right', false)}
-        onOpen={toggleDrawer('right', true)}
-      >
-        {sideList('right')}
-      </SwipeableDrawer>
+    <div>
+      <div className='nav-list'>
+        {props.links.map((text, index) => {
+          return(
+            <Link to='/' key={text}>
+              <ListItem button key={text} onClick={() => {handleClick(text, index)}}>
+                <ListItemText primary={text} />
+              </ListItem>
+            </Link>
+          )})}
+      </div>
+      <div className='bars-button'>
+        <Button onClick={toggleDrawer('right', true)}>
+          <IconContext.Provider value={{size:'2.5em'}}>
+            <FaBars />
+          </IconContext.Provider>
+        </Button>
+        <SwipeableDrawer
+          anchor="right"
+          open={state.right}
+          onClose={toggleDrawer('right', false)}
+          onOpen={toggleDrawer('right', true)}
+        >
+          {sideList('right')}
+        </SwipeableDrawer>
+      </div>
     </div>
   )
 }

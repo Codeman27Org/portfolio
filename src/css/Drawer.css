@@ -6,3 +6,20 @@
   padding-bottom: 0.5em;
   padding-top: 0.2em;
 }
+
+.nav-list {
+  display: flex;
+  
+}
+
+@media screen and (max-width: 780px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .bars-button {
+    display: none;
+  }
+}

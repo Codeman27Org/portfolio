@@ -25,3 +25,27 @@
 .about-desc {
   margin-left: 1em;
 }
+
+@media screen and (min-width: 480px) {
+  .About {
+    margin: 10em 0.7em 0 0.7em;
+  }
+}
+
+@media screen and (min-width: 590px) {
+  .About {
+    margin: 12em 0.7em 2em 0.7em;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .About {
+    margin: 16em 0.7em 2em 0.7em;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .About {
+    margin: 18em 0.7em 2em 0.7em;
+  }
+}
