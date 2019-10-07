@@ -43,7 +43,8 @@ const Drawer = (props) => {
       return
     }
     if(index < 3) {
-      props.refs[index].current.scrollIntoView(false)
+      text !=='Portfolio' ? props.refs[index].current.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'})
+      : props.refs[index].current.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'nearest'})
     }
     else {
       window.alert('A blog will be added soon!')
@@ -79,9 +80,8 @@ const Drawer = (props) => {
         {props.links.map((text, index) => {
           return(
             <Link to='/' key={text}>
-              <ListItem button key={text} onClick={() => {handleClick(text, index)}}>
-                <ListItemText primary={text} />
-              </ListItem>
+
+              <p className='nav-text' onClick={() => {handleClick(text, index)}}>{text !== 'Home' ? text : ''}</p>
             </Link>
           )})}
       </div>

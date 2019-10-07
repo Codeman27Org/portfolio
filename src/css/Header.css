@@ -28,7 +28,7 @@
 }
 
 .App-logo {
-  width: 80%;
+  width: 60%;
 
 }
 
@@ -48,4 +48,26 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (min-width: 780px) {
+  .nav {
+    font-size: 0.8em;
+  }
+  .nav-text {
+    margin: 0.2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .name-container {
+    font-size: 1.5em;
+  }
+  .nav {
+    font-size: 12em;
+  }
+  .nav-text {
+    font-size: 12px;
+    margin: 0.2em;
+  }
 }
