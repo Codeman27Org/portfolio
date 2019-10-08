@@ -9,11 +9,17 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
 }
 
 .name-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +35,6 @@
 
 .App-logo {
   width: 60%;
-
 }
 
 .nav {
@@ -63,11 +68,22 @@
   .name-container {
     font-size: 1.5em;
   }
-  .nav {
-    font-size: 12em;
+  .nav-text {
+    font-size: 1.3em;
+    margin: 0.25em;
+  }
+
+  .App-logo {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .name-container {
+    font-size: 2em;
   }
   .nav-text {
-    font-size: 12px;
-    margin: 0.2em;
+    font-size: 1.5em;
+    margin: 0.4em;
   }
 }

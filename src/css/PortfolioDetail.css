@@ -12,9 +12,10 @@
   margin-top: 10em;
 }
 
-.portfolio-text {
+.portfolio-detail-text {
   color: black;
   text-align: center;
+  font-style:
 }
 
 .detail-img {
@@ -29,7 +30,7 @@
 }
 
 .detail-description {
-  background-color: black;
+  background-color:  #0a0a0a;
   color: white;
 }
 
@@ -40,4 +41,16 @@
   margin-top: 0px;
   margin: 0 1em 0 1em;
   align-items: center;
+}
+
+@media screen and (min-width: 920px) {
+  .PortfolioDetail  {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .PortfolioDetail  {
+    margin-top: 5em;
+  }
 }

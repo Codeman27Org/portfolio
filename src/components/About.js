@@ -13,8 +13,14 @@ class About extends Component {
           <h2>Hello.</h2>
         </div>
         <div className='about-desc'>
-          <p>My name is Cody Roof and I'm a Clinical Quality Analyst at United Health Group by day and a
-            web developer\game developer by night.
+          <p>My name is Cody Roof and I'm a Clinical Quality Analyst at United Health Group for my 9 to 5
+          and web developer and game developer after hours.
+          </p>
+        </div>
+        <div className='about-desc2'>
+          <p>Obsessed with Financial Independence and all things
+          geeky and hoping to combine the two into the ultimate combo to achieve my dreams of travelling
+          the world and only working on things that move\exite me.
           </p>
         </div>
       </div>

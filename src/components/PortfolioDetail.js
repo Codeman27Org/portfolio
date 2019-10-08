@@ -13,7 +13,7 @@ class PortfolioDetail extends Component {
       <div className='PortfolioDetail'>
         <Header links={this.state.links}/>
         <div className='detail-body'>
-          <h2 className='portfolio-text'>{this.props.currentProject.title}</h2>
+          <h2 className='portfolio-detail-text'>{this.props.currentProject.title}</h2>
           <div className='image-container'>
             <img src={this.props.currentProject.image} className='detail-img' alt="portfolio pic"/>
           </div>
