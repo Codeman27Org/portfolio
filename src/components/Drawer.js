@@ -43,8 +43,7 @@ const Drawer = (props) => {
       return
     }
     if(index < 3) {
-      text !=='Portfolio' ? props.refs[index].current.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'})
-      : props.refs[index].current.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'nearest'})
+      props.refs[index].current.scrollIntoView(false)
     }
     else {
       window.alert('A blog will be added soon!')

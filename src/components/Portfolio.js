@@ -9,7 +9,7 @@ class Portfolio extends Component {
         {this.props.projects.map((project, index) => {
           return (
             <Link to={project.link} onClick={() => this.props.findClickedProject(project)} key={project.title}>
-              <div>
+              <div className='portfolio-item'>
                 <p className='portfolio-text'>{project.title}</p>
                 <img src={project.image} className='portfolio-img' alt="portfolio pic"/>
               </div>
