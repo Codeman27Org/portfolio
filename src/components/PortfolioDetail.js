@@ -8,6 +8,10 @@ class PortfolioDetail extends Component {
     links: ['Home']
   }
 
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
   render() {
     return (
       <div className='PortfolioDetail'>

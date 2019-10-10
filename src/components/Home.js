@@ -5,6 +5,11 @@ import Contact from './Contact.js'
 import Header from './Header.js'
 
 class Home extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
   render() {
     return (
       <div className="App">
