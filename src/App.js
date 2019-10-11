@@ -13,7 +13,8 @@ class App extends Component {
     aboutRef: React.createRef(),
     portfolioRef: React.createRef(),
     contactRef: React.createRef(),
-    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants, outsideLink:'https://bestaurants.io/'}
+    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
+              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
               ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame}
               ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro}],
     currentProject: ''
