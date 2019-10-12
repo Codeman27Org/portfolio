@@ -91,6 +91,15 @@
 
 @media screen and (min-width: 1380px) {
   .About {
-    margin: 19em 0.7em 2em 0.7em;
+    margin: 15em 0.7em 2em 0.7em;
+  }
+
+  .about-img {
+    width: 70%;
+  }
+
+  .about-imgcontainer {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -24,8 +24,8 @@ class PortfolioDetail extends Component {
           <div className='detail-description'>
             <div className='detail-text'>
               <p>{this.props.currentProject.text}</p>
-              <a href={this.props.currentProject.outsideLink} target='_blank' rel='noopener noreferrer'>Site</a>
-              <a href={this.props.currentProject.outsideLink} target='_blank' rel='noopener noreferrer'>Code</a>
+              <a className='detail-link' href={this.props.currentProject.outsideLink} target='_blank' rel='noopener noreferrer'>Site</a>
+              <a className='detail-link'  href={this.props.currentProject.codeLink} target='_blank' rel='noopener noreferrer'>Code</a>
             </div>
           </div>
         </div>

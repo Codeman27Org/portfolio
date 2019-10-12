@@ -38,12 +38,16 @@
   display: flex;
   flex-flow: column;
   height: 35vh;
-  margin-top: 0px;
   margin: 0 1em 0 1em;
   align-items: center;
 }
 
-@media screen and (min-width: 920px) {
+.detail-link {
+  margin-top: 0.5em;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 900px) {
   .PortfolioDetail  {
     margin-top: 2em;
   }
@@ -52,5 +56,22 @@
 @media screen and (min-width: 1320px) {
   .PortfolioDetail  {
     margin-top: 5em;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .detail-img {
+    width: 80%;
+  }
+
+  .detail-text {
+    display: flex;
+    flex-flow: column;
+    height: 35vh;
+    margin: 0 12em 0 12em;
+    align-items: center;
   }
 }
