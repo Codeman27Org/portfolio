@@ -15,8 +15,10 @@ class App extends Component {
     contactRef: React.createRef(),
     projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
               , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
-              ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame}
-              ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro}],
+              ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame
+              , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}
+              ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro
+              , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}],
     currentProject: ''
   }
 
