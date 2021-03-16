@@ -6,6 +6,7 @@ import textObject from './text_content.js'
 import bestaurants from './images/bestaurants.png'
 import matching from './images/memory_game.png'
 import pomodoro from './images/pomodoro_clock.png'
+import titanic from './images/titanic.png'
 
 class App extends Component {
   state = {
@@ -15,7 +16,7 @@ class App extends Component {
     contactRef: React.createRef(),
     projects: [{title:'Web Development', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
               , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
-              ,{title:'Data Science', image:matching, link:'matching', text:textObject.matchingGame
+              ,{title:'Data Science', image:titanic, link:'matching', text:textObject.matchingGame
               , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}],
     subProjects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
               , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
