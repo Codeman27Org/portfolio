@@ -21,7 +21,9 @@ class App extends Component {
               ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro
               , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}],
     projectsData: [{title:'Titanic Predictions', image:titanic, link:'bestaurants', text:textObject.bestaurants
-              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}],
+              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'},
+              {title:'Titanic Predictions', image:titanic, link:'bestaurants', text:textObject.bestaurants
+                        , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}],
     currentProject: ''
   }
 
