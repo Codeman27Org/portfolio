@@ -13,10 +13,18 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        <Header links={this.props.links} refs={[this.props.aboutRef, this.props.portfolioRef, this.props.contactRef]}/>
-        <About propRef={this.props.aboutRef}/>
-        <Portfolio propRef={this.props.portfolioRef} projects={this.props.projects} findClickedProject={this.props.findClickedProject}/>
-        <Contact propRef={this.props.contactRef}/>
+        <Header
+          links={this.props.links}
+          refs={[this.props.aboutRef, this.props.portfolioRef, this.props.contactRef]}/>
+        <About
+          propRef={this.props.aboutRef}/>
+        <Portfolio
+          propRef={this.props.portfolioRef}
+          projects={this.props.projects}
+          projectsData={this.props.projectsData}
+          findClickedProject={this.props.findClickedProject}/>
+        <Contact
+          propRef={this.props.contactRef}/>
       </div>
     )
   }

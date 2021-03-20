@@ -14,16 +14,14 @@ class App extends Component {
     aboutRef: React.createRef(),
     portfolioRef: React.createRef(),
     contactRef: React.createRef(),
-    projects: [{title:'Web Development', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
-              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
-              ,{title:'Data Science', image:titanic, link:'matching', text:textObject.matchingGame
-              , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}],
-    subProjects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
+    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
               , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
               ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame
               , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}
               ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro
               , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}],
+    projectsData: [{title:'Titanic Predictions', image:titanic, link:'bestaurants', text:textObject.bestaurants
+              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}],
     currentProject: ''
   }
 
@@ -41,6 +39,7 @@ class App extends Component {
                 portfolioRef={this.state.portfolioRef}
                 contactRef={this.state.contactRef}
                 projects={this.state.projects}
+                projectsData={this.state.projectsData}
                 findClickedProject={this.findClickedProject}/>
             </Route>
             <Route path={`/${this.state.currentProject.link}`}>

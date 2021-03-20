@@ -1,9 +1,12 @@
 .Portfolio {
-  display: grid;
-  grid-template-columns: auto;
   padding: 1.5em;
   text-align: center;
   background-color: #0a0a0a;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .portfolio-img {
@@ -19,7 +22,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .Portfolio {
+  .portfolio-grid {
     grid-template-columns: auto auto;
   }
 
