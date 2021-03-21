@@ -14,14 +14,12 @@ class App extends Component {
     aboutRef: React.createRef(),
     portfolioRef: React.createRef(),
     contactRef: React.createRef(),
-    projects: [{title:'Bestaurants', image:bestaurants, link:'bestaurants', text:textObject.bestaurants
-              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/GoCodeColorado/Bestaurants'}
-              ,{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame
+    projects: [{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame
               , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}
               ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro
               , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}],
-    projectsData: [{title:'Titanic Predictions', image:titanic, link:'bestaurants', text:textObject.bestaurants
-              , outsideLink:'https://bestaurants.io/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'}],
+    projectsData: [{title:'Titanic Predictions', image:titanic, link:'titanic', text:textObject.titanic
+              , outsideLink:'http://titanic.cody-roof.com/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'}],
     currentProject: ''
   }
 

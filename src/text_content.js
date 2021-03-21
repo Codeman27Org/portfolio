@@ -9,6 +9,10 @@ eventually be replacing this with another real world project as I create more of
 const pomodoroClock = `This is just a Pomodoro clock that I worked on in 2017, it was a freeCodeCamp project that I will be replacing
 as I create more web apps.`
 
-const textObject = {matchingGame:matchingGameText, bestaurants: bestaurantsText, pomodoro: pomodoroClock}
+const titanicText = `My first submission to Kaggle and my first completely solo Data Science project. Some lessons learned during this that I
+plan to implement during the next project and one of those is creating data cleaning functions in the beginning. I got to the end of the exploration and training
+sections and had to set up testing and completely forgot that this was the reason behind including cleaning functions, I shouldn't make that mistake again.`
+
+const textObject = {matchingGame:matchingGameText, bestaurants: bestaurantsText, pomodoro: pomodoroClock, titanic: titanicText}
 
 export default textObject
