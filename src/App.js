@@ -7,6 +7,7 @@ import bestaurants from './images/bestaurants.png'
 import matching from './images/memory_game.png'
 import pomodoro from './images/pomodoro_clock.png'
 import titanic from './images/titanic.png'
+import roofcalc from './images/roofcalc.png'
 
 class App extends Component {
   state = {
@@ -17,7 +18,9 @@ class App extends Component {
     projects: [{title:'Matching Game', image:matching, link:'matching', text:textObject.matchingGame
               , outsideLink:'http://matching-game.cody-roof.com/', codeLink:'https://github.com/codeman27/Udacity_FrontEndDeveloper_Project2'}
               ,{title:'Pomodoro Clock', image:pomodoro, link:'pomodoro', text:textObject.pomodoro
-              , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}],
+              , outsideLink:'http://pomodoro.cody-roof.com', codeLink:'https://github.com/codeman27/pomodoro'}
+              , {title:'RoofCalc', image:roofcalc, link:'roofcalc', text:textObject.roofcalcText
+              , outsideLink:'http://roofcalc.cody-roof.com/', codeLink:'https://github.com/codeman27/RoofCalc'}],
     projectsData: [{title:'Titanic Predictions', image:titanic, link:'titanic', text:textObject.titanic
               , outsideLink:'http://titanic.cody-roof.com/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'}],
     currentProject: ''
