@@ -5,6 +5,8 @@ import { IconContext } from 'react-icons'
 
 class Contact extends Component {
   render() {
+    const currentYear = new Date().getFullYear();
+
     return (
       <div className='Contact' ref={this.props.propRef}>
         <div className='contact-icons'>
@@ -16,7 +18,7 @@ class Contact extends Component {
           </IconContext.Provider>
         </div>
         <div className='contact-footer'>
-          <p>Copyright</p><FaRegCopyright className='contact-copyright'/> <p>2019</p>
+          <p>Copyright</p><FaRegCopyright className='contact-copyright'/> <p>2019 - {currentYear}</p>
         </div>
       </div>
     )
