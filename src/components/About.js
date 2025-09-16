@@ -10,7 +10,7 @@ class About extends Component {
         <img src={profile} className='about-img' alt="profile pic" />
       </div>
         <div className='about-hello'>
-          <h2>Hello.</h2>
+          <h2>Hello. Test</h2>
         </div>
         <div className='about-desc'>
           <p className='about-p'>My name is Cody Roof and I'm currently a Visualization Developer at Nordic Global
