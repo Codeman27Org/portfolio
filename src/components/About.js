@@ -22,7 +22,7 @@ class About extends Component {
         <div className='about-desc2'>
           <p className='about-p2'><span className='about-span'>Obsessed </span>with Financial Independence and all things
           geeky and hoping to combine the two into the Ultimate Combo! to achieve my dreams of travelling
-          the world and only working on things that move me or excite me. Testing this too. Is this mobile?
+          the world and only working on things that move me or excite me. Testing mobile CICD
           </p>
         </div>
       </div>
