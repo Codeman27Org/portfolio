@@ -8,6 +8,7 @@ import matching from './images/memory_game.png'
 import pomodoro from './images/pomodoro_clock.png'
 import titanic from './images/titanic.png'
 import roofcalc from './images/roofcalc.png'
+import house_prices from './images/house_prices.png'
 
 class App extends Component {
   state = {
@@ -22,7 +23,9 @@ class App extends Component {
               , {title:'RoofCalc', image:roofcalc, link:'roofcalc', text:textObject.roofcalcText
               , outsideLink:'http://roofcalc.cody-roof.com/', codeLink:'https://github.com/codeman27/RoofCalc'}],
     projectsData: [{title:'Titanic Predictions', image:titanic, link:'titanic', text:textObject.titanic
-              , outsideLink:'http://titanic.cody-roof.com/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'}],
+              , outsideLink:'http://titanic.cody-roof.com/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'},
+              {title:'House Price Predictions', image:house_prices, link:'house_prices', text:textObject.titanic
+              , outsideLink:'https://house-prices.cody-roof.com/', codeLink:'https://github.com/Codeman27Org/house_prices'}],
     currentProject: ''
   }
 
