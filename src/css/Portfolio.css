@@ -30,3 +30,15 @@
     margin: 1em;
   }
 }
+
+/* Add these lines */
+.portfolio-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+.portfolio-item {
+  overflow: hidden;
+}
