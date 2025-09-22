@@ -13,9 +13,14 @@ const titanicText = `My first submission to Kaggle and my first completely solo 
 plan to implement during the next project and one of those is creating data cleaning functions in the beginning. I got to the end of the exploration and training
 sections and had to set up testing and completely forgot that this was the reason behind including cleaning functions, I shouldn't make that mistake again.`
 
+const housePircesText = `My second submission to Kaggle and my second completely solo Data Science project. I applied what I learned from
+the previous project and set up repeatable cleaning process from the rip. So this one went a lot smoother than the previous one though I mostly 
+got through the data exploratory analysis but didn't get to training or predicting things.`
+
+
 const roofcalcText = `I created this to try and help friends and family analyze real estate deals by typing in an address and getting
 as much data as it could on its own with the ability to update details after the initial data pull. It uses React frontend with a Python Flask backend.`
 
-const textObject = {matchingGame:matchingGameText, bestaurants: bestaurantsText, pomodoro: pomodoroClock, titanic: titanicText, roofcalcText}
+const textObject = {matchingGame:matchingGameText, bestaurants: bestaurantsText, pomodoro: pomodoroClock, titanic: titanicText, roofcalcText, housePircesText}
 
 export default textObject

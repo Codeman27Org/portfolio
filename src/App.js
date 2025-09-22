@@ -24,7 +24,7 @@ class App extends Component {
               , outsideLink:'http://roofcalc.cody-roof.com/', codeLink:'https://github.com/codeman27/RoofCalc'}],
     projectsData: [{title:'Titanic Predictions', image:titanic, link:'titanic', text:textObject.titanic
               , outsideLink:'http://titanic.cody-roof.com/', codeLink:'https://github.com/codeman27/Kaggle_TitanicML'},
-              {title:'House Price Predictions', image:house_prices, link:'house_prices', text:textObject.titanic
+              {title:'House Price Predictions', image:house_prices, link:'house_prices', text:textObject.housePircesText
               , outsideLink:'https://house-prices.cody-roof.com/', codeLink:'https://github.com/Codeman27Org/house_prices'}],
     currentProject: ''
   }
