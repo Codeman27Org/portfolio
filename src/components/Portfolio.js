@@ -26,7 +26,7 @@ class Portfolio extends Component {
               <Link to={project.link} onClick={() => this.props.findClickedProject(project)} key={project.title}>
                 <div className='portfolio-item'>
                   <h3 className='portfolio-text'>{project.title}</h3>
-                  <img src={project.image} className='portfolio-img' alt="portfolio pic"/>
+                  <img src={project.image} className='portfolio-img portfolio-img-data' alt="portfolio pic"/>
                 </div>
               </Link>
             )

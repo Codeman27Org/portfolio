@@ -35,10 +35,15 @@
 .portfolio-img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: left center;
+
   display: block;
+}
+
+.portfolio-img-data {
+    object-position: left center;
 }
 
 .portfolio-item {
   overflow: hidden;
 }
+
