@@ -38,7 +38,7 @@ const Drawer = (props) => {
     setState({ ...state, [side]: open })
   }
 
-  const handleClick = (text, index) => {
+  const handleClick = (text, index, event) => {
     if(text === 'Home') {
       return
     }
@@ -46,7 +46,8 @@ const Drawer = (props) => {
       props.refs[index].current.scrollIntoView(false)
     }
     else {
-      window.alert('A blog will be added soon!')
+      event.preventDefault()
+      window.open('https://blog.cody-roof.com', '_blank')
     }
   }
 
@@ -63,7 +64,7 @@ const Drawer = (props) => {
           {props.links.map((text, index) => {
             return(
               <Link to='/' key={text}>
-                <ListItem button key={text} onClick={() => {handleClick(text, index)}}>
+                <ListItem button key={text} onClick={(event) => {handleClick(text, index, event)}}>
                   <ListItemText primary={text} />
                 </ListItem>
               </Link>
@@ -80,7 +81,7 @@ const Drawer = (props) => {
           return(
             <Link to='/' key={text}>
 
-              <p className='nav-text' onClick={() => {handleClick(text, index)}}>{text !== 'Home' ? text : ''}</p>
+              <p className='nav-text' onClick={(event) => {handleClick(text, index, event)}}>{text !== 'Home' ? text : ''}</p>
             </Link>
           )})}
       </div>
