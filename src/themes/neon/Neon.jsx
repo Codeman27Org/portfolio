@@ -35,11 +35,14 @@ function ParticleField() {
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const widthChanged = window.innerWidth !== w
       w = window.innerWidth
       h = window.innerHeight
       canvas.width = w * dpr
       canvas.height = h * dpr
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      // iOS resizes height whenever its toolbar collapses mid-scroll; keep the field stable.
+      if (particles && !widthChanged) return
       const count = Math.min(130, Math.floor((w * h) / 11000))
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * w,
