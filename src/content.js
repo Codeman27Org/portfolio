@@ -4,6 +4,8 @@ import pomodoro from './images/pomodoro_clock.png'
 import titanic from './images/titanic.png'
 import roofcalc from './images/roofcalc.png'
 import housePrices from './images/house_prices.png'
+import btcRetirement from './images/btc_retirement.png'
+import mtgCollection from './images/mtg_collection.png'
 import profileImg from './images/profile-img2.jpg'
 import logo from './logo.png'
 
@@ -52,6 +54,36 @@ export const exploring = [
 ]
 
 export const projects = [
+  {
+    id: 'btc_retirement',
+    title: 'Bitcoin Retirement Calculator',
+    category: 'web',
+    image: btcRetirement,
+    summary: 'When can you retire if you never sell your Bitcoin?',
+    text: `I built this to model the "borrow 'til you die" strategy: instead of selling, you borrow against your stack
+    each year, refinance the old loan plus that year's expenses, and let BTC appreciation outrun the debt. It answers
+    "When can I retire?" or "How much BTC do I need?" with a year-by-year breakdown of loans, collateral, and free
+    BTC across aggressive, moderate, and conservative LTV profiles. It's plain HTML, CSS, and JavaScript with no
+    build step.`,
+    stack: ['JavaScript', 'HTML', 'CSS', 'Bitcoin'],
+    site: 'https://btc.cody-roof.com/',
+    code: 'https://github.com/Codeman27Org/btc-retirement-calc',
+  },
+  {
+    id: 'mtg_collection',
+    title: 'MTG Collection',
+    category: 'web',
+    image: mtgCollection,
+    summary: 'Magic: The Gathering collection manager and deck builder synced over Nostr.',
+    text: `I built this to manage my Magic cards and decks right in the browser. There's no app server: data lives in
+    IndexedDB and syncs between devices through Nostr relays, encrypted with NIP-44 so only your key can read it.
+    It imports CSVs from the popular collection apps, tracks which binder or deck every copy is in, builds decks
+    with format legality and analytics, and scans cards with the phone camera using on-device OCR. Card data
+    and prices come from Scryfall.`,
+    stack: ['JavaScript', 'Nostr', 'IndexedDB', 'Vite'],
+    site: 'https://mtg.cody-roof.com/#/decks',
+    code: 'https://github.com/Codeman27Org/mtg-collection',
+  },
   {
     id: 'roofcalc',
     title: 'RoofCalc',
