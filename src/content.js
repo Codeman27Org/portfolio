@@ -6,6 +6,7 @@ import roofcalc from './images/roofcalc.png'
 import housePrices from './images/house_prices.png'
 import btcRetirement from './images/btc_retirement.png'
 import mtgCollection from './images/mtg_collection.png'
+import wordVista from './images/word_vista.png'
 import profileImg from './images/profile-img2.jpg'
 import logo from './logo.png'
 
@@ -54,6 +55,19 @@ export const exploring = [
 ]
 
 export const projects = [
+  {
+    id: 'word_vista',
+    title: 'Word Vista',
+    category: 'web',
+    image: wordVista,
+    summary: 'A calm, offline-first word puzzle: swipe letters, fill the crossword, and explore 600 levels.',
+    text: `Word Vista is a relaxing browser word game with 600 levels across ten scenic areas. Swipe letters on the
+    wheel to discover crossword answers, earn coins, and unlock hints. It is a progressive web app that works offline,
+    with no ads, purchases, or accounts, built with strict TypeScript, Vite, and plain DOM/SVG/CSS.`,
+    stack: ['TypeScript', 'Vite', 'PWA', 'SVG'],
+    site: 'https://word-vista.cody-roof.com/',
+    code: 'https://github.com/Codeman27Org/word-vista',
+  },
   {
     id: 'btc_retirement',
     title: 'Bitcoin Retirement Calculator',
