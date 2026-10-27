@@ -754,6 +754,7 @@ body {
 /* ---------- Modal ---------- */
 
 .nx-modal-wrap {
+  min-height: 100dvh;
   position: fixed;
   inset: 0;
   z-index: 900;
@@ -772,9 +773,10 @@ body {
 }
 
 .nx-modal {
+  min-height: 0;
   position: relative;
   width: min(760px, 100%);
-  max-height: 100%;
+  max-height: 100dvh;
   overflow-y: auto;
   background: rgba(20, 16, 36, 0.8);
   animation: nx-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
