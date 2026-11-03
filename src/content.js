@@ -66,7 +66,7 @@ export const projects = [
     battles. Play solo against bots or compete asynchronously over Nostr, with commit/reveal turns and battle replays.
     It is built with TypeScript, Vite, and SVG-rendered maps.`,
     stack: ['TypeScript', 'Vite', 'Nostr', 'SVG'],
-    site: null,
+    site: 'https://neon-dominion.cody-roof.com/',
     code: 'https://github.com/codeman27/NeonDominion',
   },
   {
