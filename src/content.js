@@ -7,6 +7,7 @@ import housePrices from './images/house_prices.png'
 import btcRetirement from './images/btc_retirement.png'
 import mtgCollection from './images/mtg_collection.png'
 import wordVista from './images/word_vista.png'
+import neonDominion from './images/neon_dominion.png'
 import profileImg from './images/profile-img2.jpg'
 import logo from './logo.png'
 
@@ -55,6 +56,19 @@ export const exploring = [
 ]
 
 export const projects = [
+  {
+    id: 'neon_dominion',
+    title: 'Neon Dominion',
+    category: 'web',
+    image: neonDominion,
+    summary: 'A neon-lit hex strategy game with solo bots and asynchronous multiplayer over Nostr.',
+    text: `Neon Dominion is a turn-based strategy game built around generated hex maps, territory control, and tactical
+    battles. Play solo against bots or compete asynchronously over Nostr, with commit/reveal turns and battle replays.
+    It is built with TypeScript, Vite, and SVG-rendered maps.`,
+    stack: ['TypeScript', 'Vite', 'Nostr', 'SVG'],
+    site: null,
+    code: 'https://github.com/codeman27/NeonDominion',
+  },
   {
     id: 'word_vista',
     title: 'Word Vista',

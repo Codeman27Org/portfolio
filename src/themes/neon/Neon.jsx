@@ -309,9 +309,11 @@ function Modal({ project, onClose }) {
             </div>
           )}
           <div className="nx-modal-actions">
-            <a className="nx-btn is-primary" href={project.site} target="_blank" rel="noopener noreferrer">
-              <FiExternalLink /> Live site
-            </a>
+            {project.site && (
+              <a className="nx-btn is-primary" href={project.site} target="_blank" rel="noopener noreferrer">
+                <FiExternalLink /> Live site
+              </a>
+            )}
             <a className="nx-btn" href={project.code} target="_blank" rel="noopener noreferrer">
               <FiGithub /> Source
             </a>
