@@ -27,7 +27,8 @@ function ParticleField() {
 
   useEffect(() => {
     const canvas = ref.current
-    const ctx = canvas.getContext('2d')
+    // Prefer software rendering: accelerated canvases can turn transparent at desktop sizes.
+    const ctx = canvas.getContext('2d', { willReadFrequently: true })
     const mouse = { x: -9999, y: -9999 }
     const LINK = 130
     const MOUSE = 170
@@ -35,23 +36,37 @@ function ParticleField() {
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const previousWidth = w
       const widthChanged = window.innerWidth !== w
       w = window.innerWidth
       h = window.innerHeight
-      canvas.width = w * dpr
-      canvas.height = h * dpr
+      const pixelWidth = Math.round(w * dpr)
+      const pixelHeight = Math.round(h * dpr)
+      if (canvas.width !== pixelWidth) canvas.width = pixelWidth
+      if (canvas.height !== pixelHeight) canvas.height = pixelHeight
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-      // iOS resizes height whenever its toolbar collapses mid-scroll; keep the field stable.
-      if (particles && !widthChanged) return
-      const count = Math.min(130, Math.floor((w * h) / 11000))
-      particles = Array.from({ length: count }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 1.5 + 0.6,
-        hue: Math.random() < 0.55 ? 190 : 262,
-      }))
+      if (!particles) particles = []
+      for (const p of particles) {
+        if (widthChanged) p.x *= w / previousWidth
+        p.y = Math.min(p.y, h)
+      }
+      // Height-only changes include mobile toolbar movement; keep the same stars.
+      if (widthChanged) {
+        const count = Math.min(130, Math.floor((w * h) / 11000))
+        if (particles.length > count) particles.length = count
+        while (particles.length < count) {
+          particles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.5 + 0.6,
+            hue: Math.random() < 0.55 ? 190 : 262,
+          })
+        }
+      }
+      // Resizing clears the bitmap, including when reduced motion stops the loop.
+      draw()
     }
 
     const draw = () => {
@@ -59,14 +74,20 @@ function ParticleField() {
       for (const p of particles) {
         p.x += p.vx
         p.y += p.vy
-        if (p.x < 0 || p.x > w) p.vx *= -1
-        if (p.y < 0 || p.y > h) p.vy *= -1
         const dx = p.x - mouse.x
         const dy = p.y - mouse.y
         const d = Math.hypot(dx, dy)
         if (d > 0 && d < MOUSE) {
           p.x += (dx / d) * 0.7
           p.y += (dy / d) * 0.7
+        }
+        if (p.x < 0 || p.x > w) {
+          p.vx = p.x < 0 ? Math.abs(p.vx) : -Math.abs(p.vx)
+          p.x = Math.max(0, Math.min(p.x, w))
+        }
+        if (p.y < 0 || p.y > h) {
+          p.vy = p.y < 0 ? Math.abs(p.vy) : -Math.abs(p.vy)
+          p.y = Math.max(0, Math.min(p.y, h))
         }
       }
       ctx.lineWidth = 1
