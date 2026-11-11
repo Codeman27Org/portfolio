@@ -8,6 +8,7 @@ import btcRetirement from './images/btc_retirement.png'
 import mtgCollection from './images/mtg_collection.png'
 import wordVista from './images/word_vista.png'
 import neonDominion from './images/neon_dominion.png'
+import openRing from './images/open_ring.png'
 import profileImg from './images/profile-img2.jpg'
 import logo from './logo.png'
 
@@ -56,6 +57,20 @@ export const exploring = [
 ]
 
 export const projects = [
+  {
+    id: 'open_ring',
+    title: 'Open Ring',
+    category: 'web',
+    image: openRing,
+    summary: 'A cloud-free Oura Ring app: your ring syncs over Bluetooth straight to your phone.',
+    text: `Open Ring is an installable web app that talks to an Oura Ring 4 directly over Web Bluetooth, with no
+    Oura account or subscription. It pairs with the ring, downloads its history, and shows sleep, HRV, resting heart
+    rate, blood oxygen, breathing, skin temperature and activity. Everything stays on the phone. The ring protocol
+    comes from the open-source open_oura Rust project, compiled to WebAssembly and driven from TypeScript.`,
+    stack: ['TypeScript', 'Preact', 'Rust', 'WebAssembly', 'Web Bluetooth', 'PWA'],
+    site: 'https://open-ring.cody-roof.com/',
+    code: 'https://github.com/codeman27/open-ring',
+  },
   {
     id: 'neon_dominion',
     title: 'Neon Dominion',
